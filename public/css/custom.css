@@ -1,0 +1,31 @@
+.auth-container
+{
+    min-height: 100vh;
+}
+.btn-green-custom
+{
+    color: #ffffff;
+    background-color: #009688;
+    border-color: #009688;
+}
+.img-responsive
+{
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-cover
+{
+    background-size: cover;
+}
+.img-contain
+{
+    background-size: contain;
+}
+.text-green-custom
+{
+    color: #009688;
+}
+.text-green-custom:hover
+{
+    color: #006e63;
+}
