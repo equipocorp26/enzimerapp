@@ -21,7 +21,7 @@ class UserController extends Controller
             'last_name' => $request->last_name,
             'email'     => $request->email,
             'phone'     => $request->phone,
-            'password'  => bcrypt($request->name),
+            'password'  => bcrypt($request->password),
         ]);
         /* inico sesion */
         Auth::login($user);

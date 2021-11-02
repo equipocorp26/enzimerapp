@@ -22,9 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 /* AUTH */
-/* Auth::routes(); */
+/* Auth::routes(); NO borrar hasta terminar de pasasr todas las auths*/
 /* Inicio de sesion */
 Route::get('/login',[LoginController::class,'showLoginForm'])->name('login');
+Route::post('/login',[LoginController::class,'login']);
 /* Recuperar contraseña */
 Route::get('/password/reset',[ForgotPasswordController::class,'showLinkRequestForm'])->name('password.request');
 /* Cerrar sesion */
