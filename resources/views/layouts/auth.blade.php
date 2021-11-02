@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="{{ asset('js/plugins/all.min.js') }}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -23,7 +23,7 @@
 <body>
     <div id="app">
         <div class="container-fluid">
-            <div class="row justify-content-center auth-container img-responsive img-cover" style="background-image: url({{asset('img/auth.jpg')}})">
+            <div class="row py-5 justify-content-center auth-container img-responsive img-cover" style="background-image: url({{asset('img/auth.jpg')}})">
                 <div class="col-12 col-md-6 col-lg-4 my-auto">
                     <div class="card">
                         <div class="card-body">
@@ -34,5 +34,6 @@
             </div>
         </div>
     </div>
+    @yield('scripts')
 </body>
 </html>

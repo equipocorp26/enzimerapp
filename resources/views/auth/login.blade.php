@@ -8,13 +8,13 @@
             <small class="text-muted">La herramienta perfecta para mejorar tus estudios pre-universitarios</small>
         </div>
         <div class="form-group my-4">
-            <input type="email" name="email" class="form-control" placeholder="Correo electronico">
+            <input type="email" required name="email" class="form-control" placeholder="Correo electronico">
             @error('email')
                 <small class="text-danger">{{ $message }}</small>
             @enderror
         </div>
         <div class="form-group my-4">
-            <input type="password" name="password" class="form-control" placeholder="Contraseña">
+            <input type="password" required name="password" class="form-control" placeholder="Contraseña">
             @error('password')
                 <small class="text-danger">{{ $message }}</small>
             @enderror

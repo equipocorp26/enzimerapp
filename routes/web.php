@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PlanController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +21,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/* AUTH */
+/* Auth::routes(); */
+/* Inicio de sesion */
+Route::get('/login',[LoginController::class,'showLoginForm'])->name('login');
+/* Recuperar contraseña */
+Route::get('/password/reset',[ForgotPasswordController::class,'showLinkRequestForm'])->name('password.request');
+/* Cerrar sesion */
+Route::post('/logout',[LoginController::class,'logout'])->name('logout');
+/* Registro paso 1 */
+Route::get('/register',[RegisterController::class,'showRegistrationForm'])->name('register');
+Route::post('/register',[UserController::class,'register'])->name('register.store');
+/* MIDDLEWARE AUTH */
+Route::middleware(['auth'])->group(function () {
+    /* Registro paso 2 */
+    Route::get('/register/university',[UserController::class,'showRegistrationForm2'])->name('register.university');
+    Route::post('/register/university',[UserController::class,'registerUniversity'])->name('register.university.store');
+    /* Registro paso 3 */
+    Route::get('/register/career',[UserController::class,'showRegistrationForm3'])->name('register.career');
+    Route::post('/register/career',[UserController::class,'registerCareer'])->name('register.career.store');
+    /* Planes */
+    Route::get('/planes',[PlanController::class,'index'])->name('planes.index');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
