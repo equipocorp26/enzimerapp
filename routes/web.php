@@ -43,7 +43,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/register/career',[UserController::class,'showRegistrationForm3'])->name('register.career');
     Route::post('/register/career',[UserController::class,'registerCareer'])->name('register.career.store');
     /* Planes */
-    Route::get('/planes',[PlanController::class,'index'])->name('planes.index');
+    Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
     /* Pruebas */
     Route::get('/tests',[TestController::class,'index'])->name('tests.index');
     /* Otros */

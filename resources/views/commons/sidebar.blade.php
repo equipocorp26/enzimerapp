@@ -45,6 +45,12 @@
                         Tests
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('plans.index') }}">
+                        <i class="metismenu-icon pe-7s-file"></i>
+                        Planes
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

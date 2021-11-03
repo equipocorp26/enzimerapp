@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+    <i class="fa fa-arrow-right"></i> Seleccione un plan
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
-            @foreach ($planes as $plan)
+            @foreach ($plans as $plan)
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card">
                         <div class="card-header">

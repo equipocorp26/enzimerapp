@@ -48,6 +48,6 @@ class UserController extends Controller
     public function registerCareer(RegisterCareerRequest $request)
     {
         User::findOrFail( Auth::id() )->update(['career_id' => $request->career_id]);
-        return redirect()->route('planes.index');
+        return redirect()->route('plans.index');
     }
 }
