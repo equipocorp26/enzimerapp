@@ -1,6 +1,6 @@
-<div class="app-header header-shadow">
+<div class="app-header ">
     <div class="app-header__logo">
-        <div class="logo-src"><span class="h4 mt-2 ml-5 d-none d-lg-inline-block">Enzimer</span></div>
+        <div class="logo-src">{{-- <span class="h4 mt-2 ml-5 d-none d-lg-inline-block">Enzimer</span> --}}</div>
         <div class="header__pane ml-auto">
             <div>
                 <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
@@ -44,7 +44,7 @@
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true"
                                     class="dropdown-menu dropdown-menu-right">
-                                    <a tabindex="0" class="dropdown-item">Mi perfil</a>
+                                    <a href="{{ route('users.profile') }}" tabindex="0" class="dropdown-item">Mi perfil</a>
                                     <button type="button" tabindex="0" class="dropdown-item"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar
                                         Sesión</button>

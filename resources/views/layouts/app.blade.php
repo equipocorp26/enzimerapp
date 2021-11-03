@@ -38,6 +38,11 @@
                             </div>
                         </div>
                     </div>
+                    @if(session('message'))
+                        <div class="my-3 alert alert-info alert-dismissible fade show" role="alert">
+                            {{session('message')}}                                        
+                        </div>
+                    @endif
                     @yield('content')
                 </div>
                 @include('commons.footer')

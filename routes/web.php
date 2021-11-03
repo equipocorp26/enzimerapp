@@ -46,6 +46,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
     /* Pruebas */
     Route::get('/tests',[TestController::class,'index'])->name('tests.index');
+    /* Perfil de usuario */
+    Route::get('/profile',[UserController::class,'profile'])->name('users.profile');
+    Route::post('/profile',[UserController::class,'profileUpdate'])->name('users.profile.update');
+    Route::post('/profile/password',[UserController::class,'passwordUpdate'])->name('users.password.update');
     /* Otros */
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
