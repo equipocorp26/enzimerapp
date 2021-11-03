@@ -20,6 +20,15 @@
     border: 0px none #ffffff;
 }
 /* ===== End Scrollbar CSS ===== */
+.app-header__logo .logo-src {
+    height: 50px;
+    width: 50px;
+}
+.scrollbar-sidebar
+{
+    overflow: auto;
+    overflow-y: scroll;
+}
 .auth-container
 {
     min-height: 100vh;
@@ -29,6 +38,12 @@
     color: #ffffff;
     background-color: #009688;
     border-color: #009688;
+}
+.btn-green-custom:hover
+{
+    color: #ffffff;
+    background-color: #006e63;
+    border-color: #006e63;
 }
 .img-responsive
 {
