@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
@@ -42,6 +43,8 @@ Route::middleware(['auth'])->group(function () {
     /* Registro paso 3 */
     Route::get('/register/career',[UserController::class,'showRegistrationForm3'])->name('register.career');
     Route::post('/register/career',[UserController::class,'registerCareer'])->name('register.career.store');
+    /* Panel principal */
+    Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
     /* Planes */
     Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
     /* Pruebas */
@@ -50,6 +53,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile',[UserController::class,'profile'])->name('users.profile');
     Route::post('/profile',[UserController::class,'profileUpdate'])->name('users.profile.update');
     Route::post('/profile/password',[UserController::class,'passwordUpdate'])->name('users.password.update');
-    /* Otros */
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
