@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,5 +44,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/register/career',[UserController::class,'registerCareer'])->name('register.career.store');
     /* Planes */
     Route::get('/planes',[PlanController::class,'index'])->name('planes.index');
+    /* Pruebas */
+    Route::get('/tests',[TestController::class,'index'])->name('tests.index');
+    /* Otros */
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
