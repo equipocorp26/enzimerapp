@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
     /* Flashs cards */
     Route::get('/flashcards',[FlashcardController::class,'index'])->name('flashcards.index');
+    Route::get('/flashcards/show',[FlashcardController::class,'show'])->name('flashcards.show');
     /* Pruebas */
     Route::get('/tests',[TestController::class,'index'])->name('tests.index');
     /* Perfil de usuario */

@@ -10,4 +10,8 @@ class FlashcardController extends Controller
     {
         return view('flashcards.index');
     }
+    public function show()
+    {
+        return view('flashcards.show');
+    }
 }
