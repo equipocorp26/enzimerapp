@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\CardController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\PlanController;
@@ -48,6 +49,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
     /* Planes */
     Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
+    /* Cards */
+    Route::get('/cards',[CardController::class,'index'])->name('cards.index');
     /* Flashs cards */
     Route::get('/flashcards',[FlashcardController::class,'index'])->name('flashcards.index');
     Route::get('/flashcards/show',[FlashcardController::class,'show'])->name('flashcards.show');

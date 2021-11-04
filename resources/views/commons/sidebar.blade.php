@@ -69,6 +69,12 @@
                         Flashcard finish
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('cards.index') }}">
+                        <i class="metismenu-icon pe-7s-file"></i>
+                        Cards
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
