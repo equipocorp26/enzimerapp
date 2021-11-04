@@ -81,6 +81,16 @@
     background-color: #006e63;
     border-color: #006e63;
 }
+.btn-outline-green-custom
+{
+    color: #009688;
+    border-color: #009688;
+}
+.btn-outline-green-custom:hover
+{
+    background-color: #009688;
+    color: #ffffff;
+}
 .box-grey-custom
 {
     background-color: #e4e3e9;

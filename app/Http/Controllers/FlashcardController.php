@@ -14,4 +14,8 @@ class FlashcardController extends Controller
     {
         return view('flashcards.show');
     }
+    public function finish()
+    {
+        return view('flashcards.finish');
+    }
 }

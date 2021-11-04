@@ -63,6 +63,12 @@
                         Flashcard show
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('flashcards.finish') }}">
+                        <i class="metismenu-icon pe-7s-file"></i>
+                        Flashcard finish
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
