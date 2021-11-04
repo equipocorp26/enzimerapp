@@ -51,6 +51,12 @@
                         Planes
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('flashcards.index') }}">
+                        <i class="metismenu-icon pe-7s-file"></i>
+                        Flashcard
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

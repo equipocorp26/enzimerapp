@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
@@ -47,6 +48,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
     /* Planes */
     Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
+    /* Flashs cards */
+    Route::get('/flashcards',[FlashcardController::class,'index'])->name('flashcards.index');
     /* Pruebas */
     Route::get('/tests',[TestController::class,'index'])->name('tests.index');
     /* Perfil de usuario */
