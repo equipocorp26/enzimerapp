@@ -7,6 +7,7 @@ use App\Http\Controllers\CardController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -49,6 +50,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
     /* Planes */
     Route::get('/plans',[PlanController::class,'index'])->name('plans.index');
+    /* Question */
+    Route::get('/questions',[QuestionController::class,'index'])->name('questions.index');
     /* Cards */
     Route::get('/cards',[CardController::class,'index'])->name('cards.index');
     /* Flashs cards */

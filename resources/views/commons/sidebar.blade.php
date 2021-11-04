@@ -75,6 +75,12 @@
                         Cards
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('questions.index') }}">
+                        <i class="metismenu-icon pe-7s-file"></i>
+                        Preguntas
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

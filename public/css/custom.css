@@ -33,6 +33,10 @@
 {
     min-height: 100vh;
 }
+.bg-green-custom
+{
+    background-color: #009688;
+}
 .box-blue-custom
 {
     background-color: #f7f7fe;
@@ -103,6 +107,11 @@
 {
     vertical-align: 5px!important
 }
+.icon-box-questions
+{
+    position: relative;
+    top: 35%;
+}
 .img-responsive
 {
     background-position: center;
@@ -115,6 +124,12 @@
 .img-contain
 {
     background-size: contain;
+}
+.left-bar-questions
+{
+    max-height: 600px;
+    overflow: auto;
+    overflow-y: scroll;
 }
 .register-box-university
 {
