@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Coupons;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cupones extends Model
+class Coupons extends Model
 {
     use HasFactory;
 }
