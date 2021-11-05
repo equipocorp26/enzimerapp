@@ -16,7 +16,7 @@ class CreateHistorialMembresiasTable extends Migration
         Schema::create('historial_membresias', function (Blueprint $table) {
             $table->id();
             $table->integer('id_plan');
-            $table->string('codigo_plan')->nullable();
+            $table->string('cupon_descuento')->nullable();
             $table->integer('monto');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
