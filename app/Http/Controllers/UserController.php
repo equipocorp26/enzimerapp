@@ -30,6 +30,12 @@ class UserController extends Controller
         /* retorno vista */
         return redirect()->route('register.university');
     }
+
+    public function login_admin()
+    {
+        return view('admin/login');
+    }
+
     /* Seleccionar universidad */
     protected function showRegistrationForm2()
     {
