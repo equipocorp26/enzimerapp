@@ -65,3 +65,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile',[UserController::class,'profileUpdate'])->name('users.profile.update');
     Route::post('/profile/password',[UserController::class,'passwordUpdate'])->name('users.password.update');
 });
+
+
+Route::middleware(['auth'])->group(function () {
+    /* Registro paso 2 */
+    Route::get('/admin/login/users_admin', [UserController::class, 'login_admin'])->name('admin.login');
+    Route::get('/admin/universitys',[UniversityController::class,'index'])->name('admin.universitys');
+});
